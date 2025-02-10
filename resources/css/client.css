@@ -1,0 +1,262 @@
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3e50;
+  padding: 20px;
+  color: black;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .sidebar-item {
+  margin-bottom: 20px;
+}
+
+/* Main content area adjustment to fit after the sidebar */
+.client-list-container {
+  margin-left: 250px; /* Make room for the sidebar */
+  flex-grow: 1;
+  padding: 30px;
+  background-color:  white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.client-list {
+  margin-top: 20px;
+}
+
+.client-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.client-list th,
+.client-list td {
+  padding: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left;
+  font-size: 16px;
+}
+
+.client-list th {
+  background-color: #4e73df;
+  color: white;
+  font-weight: bold;
+}
+
+.client-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.client-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Status colors */
+.status-active {
+  color: #4CAF50; /* Green for Active */
+}
+
+.status-inactive {
+  color: #FFA500; /* Orange for Inactive */
+}
+
+/* Add Client Button */
+.add-client-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  width: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-client-button:hover {
+  background-color: #218838;
+}
+
+.add-client-button:focus {
+  outline: none;
+}
+
+/* Back to Dashboard Link */
+.back-to-dashboard-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #4e73df, #2e59d9);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-to-dashboard-link::after {
+  content: '→'; 
+  margin-left: 10px; 
+  font-size: 18px; 
+  vertical-align: middle; 
+}
+
+.back-to-dashboard-link:hover {
+  background: linear-gradient(135deg, #2e59d9, #4e73df);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #28a745;
+  color:white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 48%; /* Make buttons share space equally */
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.cancel-button {
+  background-color: #dc3545; /* Red for cancel */
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.cancel-button:focus {
+  outline: none;
+}
+
+.delete-button {
+    color: #dc3545; /* Use a darker red for better contrast */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes the text stand out */
+    transition: color 0.3s ease, text-decoration 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  }
+  
+  /* Hover effect */
+  .delete-button:hover {
+    color: #c82333; /* Darker red when hovered */
+    text-decoration: underline;
+    transform: scale(1.05); /* Slightly enlarge the button for emphasis */
+  }
+  
+  /* Focus effect for accessibility */
+  .delete-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Add a subtle focus ring */
+  }
+  

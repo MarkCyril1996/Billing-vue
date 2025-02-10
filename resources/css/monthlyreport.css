@@ -1,0 +1,126 @@
+/* Main Dashboard Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #2c3e50;
+    padding: 20px;
+    color: black;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar .sidebar-item {
+    margin-bottom: 20px;
+  }
+  
+  /* Monthly Report Container */
+  .monthly-report-container {
+    margin-left: 300px; /* Make room for the sidebar */
+    flex-grow: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Report Summary */
+  .report-summary {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .report-summary strong {
+    font-weight: bold;
+  }
+  
+  /* Tables */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .table th {
+    background-color: #4e73df;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Payment Status colors */
+  .status-pending {
+    color: #ff9800; /* Orange for Pending */
+  }
+  
+  .status-completed {
+    color: #4CAF50; /* Green for Completed */
+  }
+  
+  /* Back to Dashboard Link */
+  .back-to-dashboard-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4e73df, #2e59d9);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .back-to-dashboard-link::after {
+    content: '→';
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  
+  .back-to-dashboard-link:hover {
+    background: linear-gradient(135deg, #2e59d9, #4e73df);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
