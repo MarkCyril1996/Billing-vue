@@ -58,7 +58,7 @@ function handleImageError() {
                                 :href="route('login')"
                                 class="w-full rounded-lg bg-[#FF2D20] px-4 py-2 text-center text-white transition hover:bg-[#e5241c] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#FF2D20]"
                             >
-                                Log in
+                                Log Out
                             </Link>
                             <Link
                                 v-if="canRegister"
